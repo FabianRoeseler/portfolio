@@ -2,9 +2,42 @@
   padding-top: 92px;
 }
 
+hr {
+  padding: 0;
+  width: calc(80% - 10px);
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+}
+
+div {
+  margin-left: 210px;
+  margin-right: 210px;
+}
+
 h1 {
   font-family: "syne";
   font-size: 80px;
+  text-align: center;
+  font-weight: 800;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-wrap: nowrap;
+  margin-left: 30px;
+  color: #00BC8F ;
+}
+
+#name {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-family: "overpass";
+  font-size: 20px;
   text-align: center;
   font-weight: 800;
 }
@@ -19,6 +52,20 @@ h1 {
     font-weight: 800;
   }
 
+  #name {
+    font-size: 16px;
+  }
+
+  div {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+
+  hr {
+
+    width: calc(100% - 10px);
+  }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -29,6 +76,10 @@ h1 {
     font-size: 26px;
     text-align: center;
     font-weight: 800;
+  }
+
+  #name {
+    font-size: 12px;
   }
 
 }
