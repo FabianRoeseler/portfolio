@@ -1,3 +1,34 @@
 * {
   padding-top: 92px;
 }
+
+h1 {
+  font-family: "syne";
+  font-size: 80px;
+  text-align: center;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 860px) {
+
+  h1 {
+    padding-top: 41px;
+    font-family: "syne";
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  h1 {
+    padding-top: 20px;
+    font-family: "syne";
+    font-size: 26px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+}

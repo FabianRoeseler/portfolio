@@ -17,12 +17,14 @@ header {
   padding-left: 90px;
   height: 55px;
   width: 55px;
-  rotate: -17deg;
 }
 
 /* Hamburger Menu */
-.ham {
+
+#ham-menu {
   padding-right: 90px;
+}
+.ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
@@ -74,4 +76,16 @@ header {
 
 .ham8.active .bottom {
   stroke-dashoffset: -64px;
+}
+
+@media only screen and (max-width: 550px) {
+
+  #logo {
+    padding-left: 20px;
+  }
+
+  #ham-menu {
+    padding-right: 20px;
+  }
+
 }
