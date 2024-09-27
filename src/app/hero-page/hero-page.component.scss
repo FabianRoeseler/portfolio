@@ -2,17 +2,17 @@
   padding-top: 92px;
 }
 
+#hero {
+  height: 100vh;
+}
+
 hr {
   padding: 0;
-  width: calc(80% - 10px);
   height: 1px;
   background-color: black;
   display: inline-block;
-}
-
-div {
+  width: calc(80% - 10px);
   margin-left: 210px;
-  margin-right: 210px;
 }
 
 h1 {
@@ -30,12 +30,16 @@ h2 {
   text-wrap: nowrap;
   margin-left: 30px;
   color: #00BC8F ;
+  font-weight: 600;
+  margin-left: 60px;
+  margin-right: 210px;
 }
 
 #name {
   padding: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-family: "overpass";
   font-size: 20px;
   text-align: center;
@@ -54,16 +58,13 @@ h2 {
 
   #name {
     font-size: 16px;
-  }
 
-  div {
-    margin-left: 110px;
-    margin-right: 110px;
-  }
-
-  hr {
-
-    width: calc(100% - 10px);
+    hr {
+      min-width: 250px;
+    }
+    h2 {
+      margin-left: 10px;
+     }
   }
 
 }
@@ -80,6 +81,9 @@ h2 {
 
   #name {
     font-size: 12px;
+    hr {
+      min-width: 100px;
+    }
   }
 
 }
