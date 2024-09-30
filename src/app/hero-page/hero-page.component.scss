@@ -17,7 +17,7 @@ hr {
 
 h1 {
   font-family: "syne";
-  font-size: 80px;
+  font-size: 88px;
   text-align: center;
   font-weight: 800;
 }
@@ -53,11 +53,13 @@ h2 {
   justify-content: space-between;
   padding-left: 90px;
   padding-right: 90px;
+  padding-top: 92px;
 }
 
 #arrow-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }

@@ -1,0 +1,81 @@
+* { 
+  margin: 0;
+  padding-left: 90px;
+  padding-right: 90px;
+  font-family: "syne";
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+#aboutmefoto {
+  padding: 0;
+  height: 35vh;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#aboutme {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  gap: 20px;
+}
+
+#aboutmetext {
+  padding: 0;
+  font-size: 20px;
+  font-family: overpass;
+  flex-direction: column;
+}
+
+#iconsandtext {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 60px;
+  gap: 30px;
+  padding: 0;
+}
+
+.iconandtext {
+  display: flex;
+}
+
+@media only screen and (max-width: 950px) {
+
+  #aboutmetext {
+    width: fit-content;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+
+  #aboutme {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+  }
+
+  #aboutmefoto {
+    height: auto;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 50px;
+    padding: 0;
+  }
+
+  #aboutme {
+    padding-top: 20px;
+  }
+
+}
