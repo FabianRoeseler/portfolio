@@ -84,8 +84,7 @@ p {
   }
 
   #aboutmefoto {
-    height: auto;
-    max-width: 300px;
+    height: 40vh;
     margin-right: 0px;
   }
 }
@@ -93,13 +92,14 @@ p {
 @media only screen and (max-width: 600px) {
 
   h1 {
+    text-align: center;
     font-size: 50px;
     padding: 0;
-    padding-left: 25px;
   }
 
   #aboutme {
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   #text {
@@ -109,5 +109,10 @@ p {
 
   #iconsandtext {
     padding-left: 25px;
+  }
+
+  #aboutmefoto {
+    height: 28vh;
+    margin-right: 0px;
   }
 }
