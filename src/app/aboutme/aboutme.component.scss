@@ -1,17 +1,30 @@
 * { 
   margin: 0;
-  padding-left: 90px;
-  padding-right: 90px;
   font-family: "syne";
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 800;
+  padding-left: 90px;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+#text {
+  padding: 0;
+  padding-left: 90px;
+  padding-right: 90px;
+  font-family: overpass;
 }
 
 #aboutmefoto {
   padding: 0;
+  margin-right: 90px;
   height: 35vh;
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -25,23 +38,32 @@ h1 {
 }
 
 #aboutmetext {
-  padding: 0;
   font-size: 20px;
   font-family: overpass;
-  flex-direction: column;
+  
 }
 
 #iconsandtext {
-  padding-left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  margin-top: 60px;
+  margin-top: 50px;
+  padding-left: 90px;
   gap: 30px;
-  padding: 0;
 }
 
-.iconandtext {
+#baseline {
+  display: flex;
+}
+
+#baseline img {
+  height: 40px;
+}
+
+#remoteworkline img {
+  height: 40px;
+}
+
+#remoteworkline {
   display: flex;
 }
 
@@ -64,6 +86,7 @@ h1 {
   #aboutmefoto {
     height: auto;
     max-width: 300px;
+    margin-right: 0px;
   }
 }
 
@@ -72,10 +95,19 @@ h1 {
   h1 {
     font-size: 50px;
     padding: 0;
+    padding-left: 25px;
   }
 
   #aboutme {
     padding-top: 20px;
   }
 
+  #text {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #iconsandtext {
+    padding-left: 25px;
+  }
 }
