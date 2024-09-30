@@ -46,6 +46,51 @@ h2 {
   font-weight: 800;
 }
 
+#subcontainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+#arrow-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+#arrow {
+  display: flex;
+  align-items: center;
+  font-family: "overpass";
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  rotate: 180deg;
+}
+
+#email {
+  display: flex;
+  font-family: "overpass";
+  font-size: 24px;
+  writing-mode: sideways-lr;
+  margin: 0;
+  padding: 0;
+}
+
+#arrow {
+  display: flex;
+  font-family: "overpass";
+  font-size: 24px;
+  writing-mode: sideways-lr;
+  padding: 0;
+  margin: 0;
+}
+
+
 @media only screen and (max-width: 860px) {
 
   h1 {
