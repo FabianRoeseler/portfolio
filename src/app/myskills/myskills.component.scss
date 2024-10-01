@@ -2,12 +2,6 @@
   margin: 0;
 }
 
-.main-section {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
 .arrow-div {
   display: flex;
   justify-content: flex-end;
@@ -29,7 +23,6 @@
 }
 
 .skills-section {
-  position: relative;
   border: 4px solid black;
   padding: 20px;
   width: 80%;
@@ -50,37 +43,18 @@
   }
 
   .skills {
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: center;
-    flex-direction: row !important;
+    align-items: center;
     flex-wrap: wrap;
     padding-top: 100px;
-    padding-bottom: 50px;
-    gap: 148px;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        img {
-          transform: scale(1.15);
-        }
-
-        h2 {
-          color: #4B47FF;
-          transform: scale(1.2);
-        }
-      }
+    padding-bottom: 250px;
+    gap: 100px;
 
       img {
-        height: 75px;
+        height: 50px;
         width: auto;
-        transition: 0.3s;
-
       }
 
       h2 {
@@ -106,6 +80,10 @@
       font-weight: 400;
     }
 
+    .contactcontainer {
+    width: 120px 
+    }
+
     .contact-me {
       text-decoration: none;
       font-family: 'Overpass';
@@ -119,15 +97,16 @@
         font-weight: 600;
         text-decoration: underline;
       }
-
     }
   }
 
-}
-
 .arrow-div-second {
-  height: 250px;
-  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1440px;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   &:hover {
     .arrow-bottom-right {
