@@ -1,16 +1,17 @@
 .projects {
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
+  max-width: 1440px;
 
   .header {
       display: flex;
       flex-direction: column;
       align-items: center;
+      z-index: 1;
 
       h1 {
           font-family: 'syne';
@@ -267,78 +268,5 @@
 
   to {
       transform: scale(1.5) rotate(-115deg);
-  }
-}
-
-@media (max-width: 1600px) {
-  .project-one {
-      background-color: transparent !important;
-
-      .text-one {
-          background-color: transparent !important;
-
-          p {
-              background-color: transparent !important;
-          }
-      }
-  }
-
-  .order-left,
-  .order {
-      top: -45px !important;
-      background-color: transparent !important;
-  }
-}
-
-@media (max-width: 1050px) {
-  .title {
-      font-size: 28px !important;
-  }
-
-  .skills-used {
-      font-size: 18px !important;
-  }
-
-  button {
-      width: 150px !important;
-      height: 68px;
-  }
-}
-
-@media (max-width: 750px) {
-  .project-one {
-      flex-direction: column;
-  }
-
-  .order-left,
-  .order {
-      top: -45px !important;
-      background-color: transparent !important;
-  }
-
-  .project-reverse {
-      flex-direction: column-reverse !important;
-  }
-
-  .picture-one {
-      top: 35px !important;
-  }
-
-  h1 {
-      font-size: 38px !important;
-  }
-
-  h2 {
-      font-size: 28px !important;
-  }
-}
-
-@media (max-width: 450px) {
-  h2 {
-      font-size: 16px !important;
-      margin-bottom: 36px !important;
-  }
-  .header {
-      padding: 10px;
   }
 }

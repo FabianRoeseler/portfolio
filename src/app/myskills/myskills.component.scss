@@ -1,17 +1,20 @@
+* {
+  margin: 0;
+}
+
 .main-section {
   display: flex;
   flex-direction: column;
-  padding-top: 200px;
-  width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
 }
 
 .arrow-div {
   display: flex;
-  justify-content: end;
-  position: relative;
-  height: 250px;
+  justify-content: flex-end;
+  max-width: 1440px;
+  margin: 0;
+  padding-bottom: 50px;
+
 
   &:hover {
     .arrow-bottom-left {
@@ -20,7 +23,6 @@
   }
 
   .arrow-bottom-left {
-    position: absolute;
     transform: translateX(-50%);
     transition: transform 0.3s ease, top 0.3s ease;
   }
@@ -124,9 +126,6 @@
 }
 
 .arrow-div-second {
-  display: flex;
-  justify-content: start;
-  position: relative;
   height: 250px;
   width: 70%;
 
@@ -146,82 +145,3 @@
   }
 }
 
-@media (max-width: 1050px) {
-  h1 {
-    font-size: 48px !important;
-    top: -30px !important;
-
-  }
-  .skills-section {
-    width: 90% !important;
-
-    .skills {
-      gap: 50px !important;
-    }
-  }
-
-  .main-section {
-    padding-top: 18px;
-  }
-
-  .arrow-div {
-    z-index: 88 !important;
-    height: 150px;
-    background-color: transparent;
-
-    img {
-    background-color: transparent;
-    height: 150px;
-    }
-  }
-
-  .arrow-div-second {
-    height: 150px;
-
-    img {
-      height: 150px !important;
-      width: auto !important;
-    }
-  }
-  .learn {
-    display: flex;
-    flex-direction: column;
-    p {
-      height: auto !important;
-      margin: 8px !important;
-    }
-  }
-}
-
-@media (max-width: 750px) {
-
-  .main-section {
-    padding-top: 350px;
-  }
-  .arrow-div {
-    height: 75px;
-
-    img {
-      height: 75px;
-    }
-  }
-  .arrow-div-second {
-    height: 75px;
-
-    img {
-      height: 75px !important;
-      width: auto !important;
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .main-section {
-    padding-top: 280px;
-  }
-  .skills {
-    img {
-      height: 55px !important;
-    }
-  }
-}
