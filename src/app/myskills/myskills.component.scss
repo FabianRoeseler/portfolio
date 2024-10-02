@@ -60,10 +60,10 @@ legend {
     rotate: 0deg;
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
   75% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
   100% {
     transform: scale(1);
@@ -88,13 +88,13 @@ legend {
 }
 
 #learningtext>div {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   transition: all 120ms ease-in-out;
 
   &:hover {
-    scale: 1.025;
   transition: all 120ms ease-in-out;
+  scale: 1.05;
   }
 }
 
@@ -102,7 +102,7 @@ legend {
   transition: all 120ms ease-in-out;
  
   &:hover {
-    animation: fadeOutRight 1.2s ease infinite;
+    animation: fadeOutRight 1.2s ease-in-out infinite;
     animation-direction: reverse;
   }
 }
@@ -112,13 +112,13 @@ legend {
   display: flex;
   justify-content: end;
   max-width: 1440px;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
 .arrow-div:hover>img {
   transform: translateX(-65%) translateY(15%);
-  transition: transform 0.3s ease, top 0.3s ease ;
+  transition: transform 0.3s ease-in-out, top 0.3s ease ;
 }
 
 .arrow-bottom-left {

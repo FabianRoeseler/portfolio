@@ -16,28 +16,33 @@ p {
 }
 
 #text {
-  padding: 0;
   padding-left: 90px;
   padding-right: 50px;
   font-family: overpass;
+  max-width: 400px;
 }
 
 #aboutmefoto {
-  padding: 0;
-  margin-right: 90px;
+  position: relative;
   height: 400px;
-  scale: 1;
-  transition: 225ms;
-  border: 1px solid black;
-  border-radius: 5% ;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 100px;
+  filter: grayscale(.4);
+  --c: transparent; /* the main color */
+  --b: 4px; /* thickness of the border */
+  --o: 25px; /* control the offset */
+  --_p: calc(2*var(--o) + var(--b));
+  padding: calc(var(--_p)/2);
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--o) - var(--_p));
+  transition: .1s;
 }
 
 #aboutmefoto:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  scale: 1.015;
-  transition: 225ms;
-  rotate: -0.5deg;
+    filter: grayscale(0);
+    --c: #000000; /* the main color */
+    --b: 4px; /* thickness of the border */
+    padding: 0 var(--_p) var(--_p) 0;
+    
 }
 
 #aboutme {

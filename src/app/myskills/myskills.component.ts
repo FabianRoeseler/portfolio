@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './myskills.component.scss'
 })
 export class MyskillsComponent {
-
 }
