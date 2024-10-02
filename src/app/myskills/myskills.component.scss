@@ -6,10 +6,10 @@
 fieldset {
   position: relative;
   border: 3px solid black;
-  width: 80%;
-  max-width: 1440px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0;
+  max-height: fit-content;
 }
 
 legend {
@@ -27,9 +27,8 @@ legend {
 
 .icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
-  max-width: 100vw;
   padding-top: 60px;
   padding-bottom: 60px;
   padding-left: 10px;
@@ -45,8 +44,8 @@ legend {
 }
 
 .icons>div>img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   transition: all 120ms ease-in-out;
  
   &:hover {
@@ -70,6 +69,28 @@ legend {
     transform: scale(1);
     rotate: 360deg;
   }
+}
+
+#learning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 20px;
+}
+
+#learningtext {
+  font-size: 20px;
+  display: flex;
+}
+
+#learningtext>div {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
@@ -106,3 +127,46 @@ legend {
   transform: translateX(50%);
   transition: transform 0.3s ease, top 0.3s ease;
 }
+
+
+@media only screen and (max-width: 850px) {
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#learningtext {
+  padding-top: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media only screen and (max-width: 550px) {
+  .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    padding-top: 160px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-gap: 20px;
+      padding-top: 160px;
+      padding-bottom: 60px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    }
