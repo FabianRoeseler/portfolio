@@ -76,7 +76,7 @@ legend {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 60px;
+/*   padding-top: 60px; */
   padding-bottom: 60px;
   padding-left: 10px;
   padding-right: 10px;
@@ -168,5 +168,9 @@ legend {
       padding-bottom: 60px;
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+    #learningtext {
+      font-size: 16px;
     }
     }
