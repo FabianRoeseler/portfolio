@@ -82,7 +82,7 @@ h2 {
 
 .arrow {
   position: relative;
-  animation: endlesscroll 3s linear infinite;
+  animation: endlesscroll 2s linear infinite;
   width: 35px;
   z-index: 1;
 }
@@ -97,7 +97,7 @@ h2 {
 
 @keyframes endlesscroll {
   0% {
-    transform: translateY(-400%);
+    transform: translateY(-180%);
   }
   100% {
     transform: translateY(90%);
