@@ -171,6 +171,10 @@ legend {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .legend {
+    font-size: 40px;
+  }
   }
 
   @media only screen and (max-width: 500px) {
@@ -187,4 +191,11 @@ legend {
     #learningtext {
       font-size: 16px;
     }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .legend {
+        padding-top: 20px;
+        font-size: 30px;
+      }
     }
