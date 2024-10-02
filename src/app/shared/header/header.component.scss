@@ -1,7 +1,3 @@
-* {
-  margin: 0;
-}
-
 header {
   position: fixed;
   right: 0;
@@ -12,18 +8,32 @@ header {
   justify-content: space-between;
   height: 92px;
   z-index: 100;
+  opacity: 0;
+  animation: fadeIn 4s ease forwards;
+  max-width: 1440px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #logo {
-  padding-left: 90px;
+  padding-left: 10px;
   height: 55px;
   width: 55px;
+  margin-left: 120px;
 }
 
 /* Hamburger Menu */
 
 #ham-menu {
-  padding-right: 90px;
+  padding-right: 10px;
+  margin-right: 120px;
 }
 .ham {
   cursor: pointer;
@@ -82,11 +92,11 @@ header {
 @media only screen and (max-width: 550px) {
 
   #logo {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   #ham-menu {
-    padding-right: 20px;
+    padding-right: 10px;
   }
 
 }

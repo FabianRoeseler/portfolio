@@ -9,6 +9,19 @@ hr {
   display: inline-block;
   width: calc(80% - 10px);
   margin-left: 200px;
+  opacity: 0;
+  animation: fadeInSlideReverse 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideReverse {
+  from {
+    opacity: 0;
+    transform: translateX(-850px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 h1 {
@@ -16,6 +29,19 @@ h1 {
   font-size: 88px;
   text-align: center;
   font-weight: 800;
+  opacity: 0;
+  animation: fadeInSlideDown 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h2 {
@@ -29,6 +55,19 @@ h2 {
   font-weight: 600;
   margin-left: 60px;
   margin-right: 210px;
+  opacity: 0;
+  animation: fadeInSlideIn 2s ease-out forwards;
+}
+
+@keyframes fadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(850px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #name {
@@ -49,7 +88,7 @@ h2 {
   justify-content: space-between;
   padding-left: 90px;
   padding-right: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 150px;
   padding-top: 30px;
 }
 
@@ -78,6 +117,17 @@ h2 {
   flex-direction: column;
   gap: 20px;
   padding-right: 20px;
+  opacity: 0;
+animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
 }
 
 .arrow {
@@ -111,6 +161,19 @@ h2 {
   writing-mode: sideways-lr;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  animation: fadeInSlideEmail 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideEmail {
+  from {
+    opacity: 0;
+    transform: translateX(-850px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
 }
 
 #arrow {
