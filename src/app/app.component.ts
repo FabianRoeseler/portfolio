@@ -12,7 +12,7 @@ import { ContactmeComponent } from './contactme/contactme.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, HeroPageComponent, FooterComponent, AboutmeComponent, MyskillsComponent, PortfolioComponent, ContactmeComponent ],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, HeroPageComponent, FooterComponent, AboutmeComponent, MyskillsComponent, PortfolioComponent, ContactmeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
