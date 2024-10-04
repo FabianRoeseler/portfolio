@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -47,8 +51,6 @@ h2 {
 .textcontainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
   margin-bottom: 120px;
   font-family: overpass;
   gap: 20px;
@@ -64,18 +66,28 @@ h2 {
   font-family: 'Overpass';
   font-size: 22px;
   font-weight: 400;
-  margin-left: 250px;
+  text-align: end;
+}
+
+.orderDivOne {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .orderTwo {
   font-family: 'Overpass';
   font-size: 22px;
   font-weight: 400;
-  margin-right: 250px;
+}
+
+.orderDivTwo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 button {
-  margin-top: 50px;
   background-color: whitesmoke;
   border: 3px solid black;
   padding: 10px;
