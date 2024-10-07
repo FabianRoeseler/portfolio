@@ -119,6 +119,8 @@ button {
   }
 }
 
+
+@media (min-width: 800px) {
 .picture-one  {
   margin-right: 100px;
   filter: grayscale(.4);
@@ -138,3 +140,19 @@ button {
     --b: 4px; /* thickness of the border */
     padding: 0 var(--_p) var(--_p) 0;
 }
+}
+
+@media only screen and (max-width: 1050px) {
+
+.project {
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media only screen and (max-width: 800px) {
+
+.picture-one {
+  margin-bottom: 10px;
+}
+  }

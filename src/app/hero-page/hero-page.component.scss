@@ -217,6 +217,12 @@ h1 {
      }
   }
 
+  .group {
+    gap: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -236,8 +242,14 @@ h1 {
     }
   }
 
-  #email {
-    font-size: 12px;
+  #subcontainer {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
   }
 
-}
+  #email {
+    padding-bottom: 60px;
+  }
+
+  }
