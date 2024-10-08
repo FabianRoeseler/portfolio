@@ -1,14 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  max-width: 1440px;
 }
 
 fieldset {
   position: relative;
   border: 3px solid black;
-  max-width: 80%;
   margin: 0 auto;
   padding: 0;
+  width: 90vw;
   max-height: fit-content;
 }
 
@@ -109,6 +110,7 @@ legend {
 
 
 .arrow-div {
+  margin: 0 auto;
   display: flex;
   justify-content: end;
   max-width: 1440px;
@@ -127,6 +129,7 @@ legend {
 }
 
 .arrow-div-second {
+  margin: 0 auto;
   display: flex;
   justify-content: start;
   max-width: 1440px;

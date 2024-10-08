@@ -1,5 +1,6 @@
 * { 
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
   font-family: "syne";
 }
 
@@ -19,13 +20,12 @@ p {
   padding-left: 90px;
   padding-right: 50px;
   font-family: overpass;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 #aboutmefoto {
   position: relative;
   height: 400px;
-  margin-right: 100px;
   filter: grayscale(.4);
   --c: transparent; /* the main color */
   --b: 4px; /* thickness of the border */
@@ -83,6 +83,7 @@ p {
 
 #remoteworkline {
   display: flex;
+  margin-left: 0px;
 }
 
 #contactmebutton {
@@ -118,6 +119,7 @@ p {
 
   #aboutmefoto {
     height: 300px;
+    margin-right: none;
   }
 }
 
@@ -131,7 +133,7 @@ p {
 
   #aboutmefoto {
     height: 400px;
-    margin-right: 0px;
+    margin-right: none;
   }
 }
 
@@ -153,12 +155,9 @@ p {
     padding-right: 25px;
   }
 
-  #iconsandtext {
-    padding-left: 25px;
-  }
 
   #aboutmefoto {
     height: 250px;
-    margin-right: 0px;
+    margin-right: none;
   }
 }
