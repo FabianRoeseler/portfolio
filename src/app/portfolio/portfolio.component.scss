@@ -17,6 +17,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-top: 15px;
+margin-left: 60px;
+margin-right: 60px;
 }
 
 h1 {
@@ -34,6 +36,7 @@ h2 {
 
 .project {
   display: flex;
+  width: 90vw;
 }
 
 .project-two {
@@ -121,7 +124,6 @@ button {
 
 @media (min-width: 800px) {
 .picture-one  {
-  margin-right: 100px;
   filter: grayscale(.4);
   --c: transparent; /* the main color */
   --b: 4px; /* thickness of the border */
