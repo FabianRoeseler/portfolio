@@ -9,28 +9,46 @@ width: 100%;
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
-justify-content: center;
 flex-direction: column;
 }
 
-#opener {
-
+#content {
+  margin: 0 auto;
+  display: flex;
+  width: 1440px;
+  background-color: transparent;
   text-align: left;
+  margin-top: 100px;
   h1 {
   font-family: 'Syne';
   font-size: 78px;
   font-weight: 800;
-  background-color: black;
+  background-color: transparent;
   color: whitesmoke;
+  padding-left: 90px;
 }
 }
 
 span {
   font-family: 'overpass';
-  font-size: 40px;
-  background-color: black;
-  color: whitesmoke;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 50px;
+  background-color: transparent;
+  color: #00BC8F;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+p {
+  font-family: 'overpass';
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 0px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
 }
