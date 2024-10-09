@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+
+section {
+background-image: url('../../assets/img/rectangle.png');
+height: 70vh;
+width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+h1 {
+  font-family: 'Syne';
+  font-size: 78px;
+  font-weight: 800;
+  background-color: black;
+  color: whitesmoke;
+}
+
+span {
+  font-family: 'overpass';
+  font-size: 78px;
+  background-color: black;
+  color: whitesmoke;
+}
