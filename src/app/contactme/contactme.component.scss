@@ -1,10 +1,11 @@
 * {
   margin: 0;
+  background-color: transparent;
 }
 
 section {
 background-image: url('../../assets/img/rectangle.png');
-height: 70vh;
+height: 100vh;
 width: 100%;
 background-repeat: no-repeat;
 background-size: cover;
@@ -45,10 +46,48 @@ p {
   font-family: 'overpass';
   font-size: 22px;
   font-weight: 400;
-  margin-top: 0px;
+  margin-top: 20px;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: transparent;
+  color: whitesmoke; 
+}
+
+.text-field {
+  color: whitesmoke;
+  border: none;
+  border-bottom:  solid 3px whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 30px;
+  height: 50px;
+  width: 600px;
+  max-width: 600px;
+  text-indent: 20px;
+}
+
+#message {
+  height: 200px;
+  width: 600px;
+  max-width: 600px;
+  resize: none;
+}
+
+::placeholder {
+  color: whitesmoke;
+  opacity: 1;
 }

@@ -4,4 +4,56 @@
   </div>
   <span>Want to discuss a new project?</span>
   <p id="spanTwo">Say hello! Let's discuss your ideas and make it happen</p>
+
+  <div class="contact-form">
+    <form id="messageForm">
+      <!-- Name Field -->
+      <div>
+        <input
+          class="text-field"
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+      </div>
+
+      <!-- Email Field -->
+      <div>
+        <input
+          class="text-field"
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+        />
+      </div>
+
+      <!-- Message Field -->
+      <div>
+        <textarea
+          class="text-field"
+          id="message"
+          name="message"
+          placeholder="Your message"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+
+      <!-- Privacy Policy Checkbox -->
+      <div class="privacy-policy">
+        <input type="checkbox" id="privacy" name="privacy" required />
+        <label for="privacy"
+          >I've read the<a href="#">privacy policy</a> and agree to the
+          processing of my data as outlined.</label
+        >
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </section>
