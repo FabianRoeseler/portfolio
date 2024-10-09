@@ -23,6 +23,7 @@ p {
   max-width: 600px;
 }
 
+@media only screen and (min-width: 400px) {
 #aboutmefoto {
   position: relative;
   height: 400px;
@@ -35,6 +36,7 @@ p {
   outline: var(--b) solid var(--c);
   outline-offset: calc(var(--o) - var(--_p));
   transition: .1s;
+}
 }
 
 #aboutmefoto:hover {
@@ -159,6 +161,14 @@ p {
 
   #aboutmefoto {
     height: 250px;
+    margin-right: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  #aboutmefoto {
+    height: 200px;
     margin-right: none;
   }
 }
