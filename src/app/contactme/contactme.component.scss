@@ -10,20 +10,27 @@ background-repeat: no-repeat;
 background-size: cover;
 display: flex;
 justify-content: center;
-align-items: center;
+flex-direction: column;
 }
 
-h1 {
+#opener {
+
+  text-align: left;
+  h1 {
   font-family: 'Syne';
   font-size: 78px;
   font-weight: 800;
   background-color: black;
   color: whitesmoke;
 }
+}
 
 span {
   font-family: 'overpass';
-  font-size: 78px;
+  font-size: 40px;
   background-color: black;
   color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
