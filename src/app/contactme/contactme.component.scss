@@ -110,6 +110,14 @@ form {
   text-indent: 20px;
 }
 
+#name {
+  width: 600px;
+}
+
+#email {
+  width: 600px;
+}
+
 #message {
   height: 200px;
   width: 600px;
@@ -117,14 +125,44 @@ form {
   resize: none;
 }
 
+#submitbutton {
+  margin-top: 50px;
+  background-color: black;
+  color:#00BC8F;
+  border: 3px solid #00BC8F;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: overpass;
+  transition: all 120ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+    transition: all 120ms ease-in-out;
+  }
+}
+
 .privacy-policy {
   padding-top: 10px;
   margin-bottom: 20px;
   margin-right: 70px;
+
+  a {
+    text-decoration: none;
+    color: #00BC8F;
+  }
 }
 
 .privacytext {
   font-size: 14px;
+}
+
+#privacy {
+  background-color: black;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
 }
 
 ::placeholder {
