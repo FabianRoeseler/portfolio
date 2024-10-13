@@ -1,10 +1,65 @@
 footer {
     background-color: black;
+    color: whitesmoke;
     right: 0;
     left: 0;
     bottom: 0;
+    height: 92px;
+    padding-bottom: 40px;
+  }
+
+  #footerdiv {
+    max-width: 1440px;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  #logo {
+  height: 55px;
+  width: 55px;
+  margin: 0;
+  }
+
+  #flexcontainer {
+    background-color: black;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 92px;
+  }
+
+  #leftcontainer {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+        span {
+            background-color: black;
+            color: whitesmoke;
+            align-self: flex-start;
+    }
+  }
+
+  #rightcontainer {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    margin-right: 120px;
+    gap: 25px;
+        img {
+            background-color: black;
+            height: 25px;
+        }
+  }
+
+  #legals {
+    text-align: end;
+    background-color: black;
+        a {
+            text-decoration: none;
+            background-color: black;
+            color: whitesmoke;
+            margin-right: 120px;
+        }
   }
