@@ -1,5 +1,7 @@
 footer {
     background-color: black;
+    display: flex;
+    justify-content: center;
     color: whitesmoke;
     right: 0;
     left: 0;
@@ -10,56 +12,38 @@ footer {
 
   #footerdiv {
     max-width: 1440px;
-    margin-left: 120px;
-    margin-right: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    background-color: black;
+  }
+
+  #leftcontainer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+
+  #rightcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    a, div {
+      background-color: black;
+    }
+  }
+
+  .socials {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-color: black;
   }
 
   #logo {
   height: 55px;
   width: 55px;
   margin: 0;
-  }
-
-  #flexcontainer {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #leftcontainer {
-    margin: 0;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-        span {
-            background-color: black;
-            color: whitesmoke;
-            align-self: flex-start;
-    }
-  }
-
-  #rightcontainer {
-    margin: 0;
-    background-color: black;
-    display: flex;
-    margin-right: 120px;
-    gap: 25px;
-        img {
-            background-color: black;
-            height: 25px;
-        }
-  }
-
-  #legals {
-    text-align: end;
-    background-color: black;
-        a {
-            text-decoration: none;
-            background-color: black;
-            color: whitesmoke;
-            margin-right: 120px;
-        }
   }
