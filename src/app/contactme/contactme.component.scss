@@ -5,7 +5,7 @@
 
 section {
 background-image: url('../../assets/img/rectangle.png');
-height: 100vh;
+height: 100%;
 width: 100%;
 background-repeat: no-repeat;
 background-size: cover;
@@ -58,7 +58,6 @@ p {
 }
 
 .contact-form {
-  height: 100vh;
   text-wrap: wrap;
 }
 
@@ -85,6 +84,7 @@ form {
   height: 50px;
   max-width: 600px;
   text-indent: 20px;
+  transition: all 120ms ease-in-out;
 }
 
 #name {
@@ -100,6 +100,16 @@ form {
   width: 600px;
   max-width: 600px;
   resize: none;
+}
+
+.border {
+  border: solid 2px transparent;
+  transition: all 120ms ease-in-out;
+}
+
+.border:hover {
+  border: solid 2px whitesmoke;
+  transition: all 120ms ease-in-out;
 }
 
 #submitbutton {
@@ -145,4 +155,9 @@ form {
 ::placeholder {
   color: whitesmoke;
   opacity: 1;
+}
+
+@media only screen and (max-width: 1050px) {
+
+  
 }

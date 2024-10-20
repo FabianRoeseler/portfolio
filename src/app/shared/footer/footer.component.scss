@@ -33,14 +33,21 @@ footer {
   #rightcontainer {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column-reverse;
     background-color: black;
     margin-left: 120px;
     margin-right: 0px;
     a, div {
       background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       color: whitesmoke;
     }
