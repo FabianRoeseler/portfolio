@@ -1,67 +1,73 @@
 footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  height: 92px;
+  padding-bottom: 40px;
+  padding-top: 120px;
+}
+
+#footerdiv {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+#leftcontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+#rightcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  background-color: black;
+  margin-left: 120px;
+  margin-right: 0px;
+  a, div {
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     color: whitesmoke;
-    height: 92px;
-    padding-bottom: 40px;
-    padding-top: 120px;
   }
+}
 
-  #footerdiv {
-    width: 100%;
-    height: 100%;
-    max-width: 1440px;
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    margin-left: 120px;
-    margin-right: 120px;
-  }
+.socials {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  background-color: black;
+}
+#logo {
+height: 55px;
+width: 55px;
+margin: 0;
+}
 
-  #leftcontainer {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 10px;
-    gap: 10px;
+@media only screen and (max-width: 600px) {
+  footer {
+    padding-bottom: 80px;
+    font-size: 14px;
   }
-
-  #rightcontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-    background-color: black;
-    margin-left: 120px;
-    margin-right: 0px;
-    a, div {
-      background-color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: whitesmoke;
-    }
-  }
-
-  .socials {
-    height: 40px;
-    width: 40px;
-    margin: 10px;
-    background-color: black;
-  }
-
-  #logo {
-  height: 55px;
-  width: 55px;
-  margin: 0;
-  }
+}
