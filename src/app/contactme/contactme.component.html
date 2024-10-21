@@ -6,10 +6,17 @@
   <p id="spanTwo">Say hello! Let's discuss your ideas and make it happen</p>
 
   <div class="contact-form">
-    <form id="messageForm">
-      <!-- Name Field -->
+    <form
+      (ngSubmit)="onSubmit(contactForm)"
+      #contactForm="ngForm"
+      id="messageForm"
+      action="https://formspree.io/f/xovqvjvv"
+      method="POST"
+    >
       <div class="border">
         <input
+          [(ngModel)]="contactData.name"
+          #name="ngModel"
           class="text-field"
           id="name"
           type="text"
@@ -17,42 +24,64 @@
           placeholder="Your name"
           required
         />
+        @if (!name.valid && name.touched) {
+        <span class="error">Youre name is required</span>
+        }
       </div>
 
-      <!-- Email Field -->
       <div class="border">
         <input
+          [(ngModel)]="contactData.email"
+          #email="ngModel"
           class="text-field"
           id="email"
           type="email"
           name="email"
           placeholder="Your email"
           required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
+        @if (!email.valid && email.touched) {
+        <span class="error">Youre email is required</span>
+        }
       </div>
 
-      <!-- Message Field -->
       <div class="border">
         <textarea
+          #message="ngModel"
+          [(ngModel)]="contactData.message"
+          minlength="4"
           class="text-field"
           id="message"
           name="message"
           placeholder="Your message"
-          rows="5"
           required
         ></textarea>
+        @if (!message.valid && message.touched) {
+        <span class="error">Your message is empty</span>
+        }
       </div>
 
-      <!-- Privacy Policy Checkbox -->
       <div class="privacy-policy">
-        <input type="checkbox" id="privacy" name="privacy" required />
+        <input
+          #checkbox="ngModel"
+          [(ngModel)]="contactData.checkbox"
+          type="checkbox"
+          id="privacy"
+          name="privacy"
+          required
+        />
         <label class="privacytext" for="privacy"
           >I've read the <a href="#">privacy policy</a> and agree to the
           processing of my data as outlined.</label
         >
+        @if (!checkbox.valid && checkbox.untouched) {
+        <span class="error">
+          <br /><br />Please accept to our privacy policy</span
+        >
+        }
       </div>
 
-      <!-- Submit Button -->
       <button id="submitbutton" type="submit">Send Message</button>
     </form>
   </div>

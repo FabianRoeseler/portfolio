@@ -116,6 +116,16 @@ form {
   transition: all 120ms ease-in-out;
 }
 
+.error {
+  position: absolute;
+  color: firebrick;
+  font-size: 14px;
+  display: block;
+  margin-left: 20px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
 #submitbutton {
   margin-top: 50px;
   background-color: black;
@@ -146,6 +156,9 @@ form {
   a {
     text-decoration: none;
     color: #00BC8F;
+  }
+  span {
+  text-align: left;
   }
 }
 
@@ -211,6 +224,10 @@ form {
     font-size: 20px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .error {
+    margin-left: 5px;
   }
 }
 
