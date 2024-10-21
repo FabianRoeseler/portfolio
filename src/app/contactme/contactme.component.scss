@@ -148,17 +148,21 @@ form {
 .privacy-policy {
   padding-top: 10px;
   margin-top: 40px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   a {
     text-decoration: none;
     color: #00BC8F;
   }
   span {
-  text-align: left;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    font-size: 14px;
+    display: block;
   }
 }
 

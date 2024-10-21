@@ -73,13 +73,11 @@
         />
         <label class="privacytext" for="privacy"
           >I've read the <a href="#">privacy policy</a> and agree to the
-          processing of my data as outlined.</label
-        >
-        @if (!checkbox.valid && checkbox.touched) {
-        <span class="error">
-          <br /><br />Please accept to our privacy policy</span
-        >
-        }
+          processing of my data as outlined. @if (!checkbox.valid &&
+          checkbox.touched) {
+          <span class="error"> <br />Please accept to our privacy policy</span>
+          }
+        </label>
       </div>
 
       <button id="submitbutton" type="submit">Send Message</button>
