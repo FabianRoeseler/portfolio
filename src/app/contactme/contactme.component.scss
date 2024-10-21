@@ -72,6 +72,24 @@ form {
   gap: 30px;
 }
 
+#name {
+  width: 600px;
+  outline: none;
+}
+
+#email {
+  width: 600px;
+  outline: none;
+}
+
+#message {
+  outline: none;
+  height: 200px;
+  width: 600px;
+  max-width: 600px;
+  resize: none;
+}
+
 .text-field {
   color: whitesmoke;
   border: none;
@@ -86,21 +104,6 @@ form {
   max-width: 600px;
   text-indent: 20px;
   transition: all 120ms ease-in-out;
-}
-
-#name {
-  width: 600px;
-}
-
-#email {
-  width: 600px;
-}
-
-#message {
-  height: 200px;
-  width: 600px;
-  max-width: 600px;
-  resize: none;
 }
 
 .border {
@@ -136,8 +139,10 @@ form {
   padding-top: 10px;
   margin-top: 40px;
   margin-bottom: 20px;
-  margin-right: 70px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   a {
     text-decoration: none;
     color: #00BC8F;
