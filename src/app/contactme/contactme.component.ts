@@ -19,8 +19,13 @@ export class ContactmeComponent {
 
   onSubmit(ngForm: NgForm) {
     if(ngForm.valid && ngForm.submitted) {
-    
+    console.log(this.contactData);
+    ngForm.reset();
+    document.getElementById("submiterror")!.style.display = "none";
+    } else if (!ngForm.valid && ngForm.submitted) {
+      console.log("invalid form"); 
+      document.getElementById("submiterror")!.style.display = "block";
     }
   }
-
+  
 }

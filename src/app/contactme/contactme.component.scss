@@ -163,6 +163,7 @@ form {
     position: absolute;
     font-size: 14px;
     display: block;
+    opacity: 0.8;
   }
 }
 
@@ -174,6 +175,23 @@ form {
   background-color: black;
   border: 1px solid whitesmoke;
   color: whitesmoke;
+}
+
+#submiterrorcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;  
+}
+
+#submiterror {
+  position: absolute;
+  color: firebrick;
+  font-size: 16px;
+  display: none;
+  margin-top: 5px;
+  opacity: 0.8;
+  justify-content: center;
 }
 
 ::placeholder {
