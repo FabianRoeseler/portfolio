@@ -17,15 +17,21 @@ export class ContactmeComponent {
     checkbox: false
   }
 
+  displaySubmiterror (){
+    document.getElementById("submiterrorcontainer")!.classList.add("fade-in-error");
+  setTimeout(() => {
+    document.getElementById("submiterrorcontainer")!.classList.remove("fade-in-error");
+    }, 4000);
+  }
+
   onSubmit(ngForm: NgForm) {
     if(ngForm.valid && ngForm.submitted) {
     console.log(this.contactData);
     ngForm.reset();
-    document.getElementById("submiterror")!.style.display = "none";
+    document.getElementById("submiterrorcontainer")!.style.display = "none";
     } else if (!ngForm.valid && ngForm.submitted) {
       console.log("invalid form"); 
-      document.getElementById("submiterror")!.style.display = "block";
+      this.displaySubmiterror();
+      }
     }
   }
-  
-}
