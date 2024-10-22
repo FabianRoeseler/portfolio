@@ -24,6 +24,7 @@ justify-content: center;
   height: auto;
   max-width: 1440px;
 }
+
 h1 {
   font-family: 'Syne';
   font-size: 78px;
@@ -209,6 +210,10 @@ form {
 }
 
 @media only screen and (max-width: 850px) {
+
+  h1 {
+    padding-top: 50px;
+  }
 
   #name {
     width: 400px;

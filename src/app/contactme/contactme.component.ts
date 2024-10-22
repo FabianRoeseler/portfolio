@@ -28,7 +28,6 @@ export class ContactmeComponent {
     if(ngForm.valid && ngForm.submitted) {
     console.log(this.contactData);
     ngForm.reset();
-    document.getElementById("submiterrorcontainer")!.style.display = "none";
     } else if (!ngForm.valid && ngForm.submitted) {
       console.log("invalid form"); 
       this.displaySubmiterror();
