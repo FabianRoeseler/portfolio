@@ -15,6 +15,19 @@
         <img src="assets/img/maillogo.png" class="socials" alt="Email Logo" />
       </div>
       <a href="/../../../privacy.html" target="_blank">Legal notice</a>
+      <button (click)="openModal()">Open Modal</button>
     </div>
   </div>
+
+  <!-- Modal Content -->
+  <ng-container *ngIf="isModalOpen">
+    <div class="overlay" (click)="closeModal()"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <h2>Modal Title</h2>
+        <p>Some information to display inside the modal.</p>
+        <button (click)="closeModal()">Close Modal</button>
+      </div>
+    </div>
+  </ng-container>
 </footer>
