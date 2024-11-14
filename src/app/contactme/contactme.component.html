@@ -72,8 +72,8 @@
           required
         />
         <label class="privacytext" for="privacy"
-          >I've read the <a href="#">privacy policy</a> and agree to the
-          processing of my data as outlined. @if (!checkbox.valid &&
+          >I've read the <a (click)="openModal()">privacy policy</a> and agree
+          to the processing of my data as outlined. @if (!checkbox.valid &&
           checkbox.touched) {
           <span class="error"> <br />Please accept to our privacy policy</span>
           }
@@ -88,4 +88,60 @@
       >
     </div>
   </div>
+
+  <!-- Modal Content -->
+  <ng-container *ngIf="isModalOpen">
+    <div class="overlay" (click)="closeModal()"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <h2 class="centerwrap">Datenschutz­erklärung<br /><br /></h2>
+        <h3>
+          1. Verantwortlicher Verantwortlich für die Datenverarbeitung auf
+          dieser Webseite ist:
+        </h3>
+        <div>
+          Fabian Roeseler <br />
+          Magdalenenstraße 7 <br />
+          42111 Wuppertal
+        </div>
+
+        <h3>2. Erfassung und Verarbeitung personenbezogener Daten</h3>
+        <div>
+          Auf dieser Webseite werden keine personenbezogenen Daten automatisch
+          erfasst. Es werden keine Cookies oder andere Tracking-Technologien
+          verwendet, die personenbezogene Daten sammeln.
+        </div>
+        <h3>3. Kontaktaufnahme</h3>
+        <div>
+          Wenn du per E-Mail oder über ein Kontaktformular Kontakt mit mir
+          aufnimmst, speichere ich die von dir übermittelten Daten (z. B. Name,
+          E-Mail-Adresse), um deine Anfrage zu bearbeiten. Diese Daten werden
+          nur für die Bearbeitung deiner Anfrage verwendet und anschließend
+          gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen bestehen.
+        </div>
+        <h3>4. Rechte der betroffenen Personen</h3>
+        <div>
+          Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung
+          der Verarbeitung, Widerspruch und Datenübertragbarkeit deiner
+          personenbezogenen Daten gemäß den gesetzlichen Vorschriften.
+        </div>
+        <div>
+          Falls du eines dieser Rechte in Anspruch nehmen möchtest oder Fragen
+          zum Datenschutz hast, kontaktiere mich bitte unter den oben genannten
+          Kontaktdaten.
+        </div>
+        <h3>5. Beschwerderecht bei der Aufsichtsbehörde</h3>
+        <div>
+          Solltest du der Ansicht sein, dass die Verarbeitung deiner
+          personenbezogenen Daten gegen die Datenschutz-Grundverordnung
+          verstößt, hast du das Recht, dich bei einer
+          Datenschutzaufsichtsbehörde zu beschweren. In Deutschland ist dies die
+          zuständige Behörde deines Wohnsitzes oder deines Arbeitsortes.
+        </div>
+        <div class="centerwrap">
+          <button id="closebutton" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
 </section>

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactme',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contactme.component.html',
   styleUrl: './contactme.component.scss'
 })
@@ -32,5 +33,19 @@ export class ContactmeComponent {
       console.log("invalid form"); 
       this.displaySubmiterror();
       }
+    }
+
+    isModalOpen = false;
+
+    constructor(@Inject(DOCUMENT) private document: Document) {}
+  
+    openModal() {
+      this.isModalOpen = true;
+      this.document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
+  
+    closeModal() {
+      this.isModalOpen = false;
+      this.document.body.style.overflow = 'auto'; // Restore background scroll
     }
   }
