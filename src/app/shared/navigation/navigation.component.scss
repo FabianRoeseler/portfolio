@@ -1,0 +1,17 @@
+* {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#nav-menu {
+  padding-top: 110px;
+  gap: 20px;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "overpass";
+  flex-direction: column;
+}
