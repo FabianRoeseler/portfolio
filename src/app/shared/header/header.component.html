@@ -1,11 +1,14 @@
 <header>
-  <img id="logo" src="assets/img/frlogo.png" alt="FR Logo" />
-
+  <a href="#">
+    <img id="logo" src="assets/img/frlogo.png" alt="FR Logo" />
+  </a>
   <div id="ham-menu">
     <svg
       class="ham hamRotate ham8"
       viewBox="0 0 100 100"
       width="80"
+      [routerLink]="isNavigationOpen ? '' : '/navigation'"
+      (click)="isNavigationOpen = !isNavigationOpen"
       onclick="this.classList.toggle('active')"
     >
       <path
