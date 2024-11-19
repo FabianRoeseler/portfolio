@@ -146,6 +146,9 @@ to {
   z-index: 2;
   padding-top: 5px;
   padding-bottom: 50px;
+  text-decoration: none;
+  color: black;
+  font-family: overpass;
 }
 
 @keyframes endlesscroll {
@@ -161,9 +164,9 @@ to {
   display: flex;
   font-family: "overpass";
   font-size: 24px;
-  writing-mode: sideways-lr;
+  rotate: -90deg;
+ /*  writing-mode: sideways-lr; */
   margin: 0;
-  padding: 0;
   opacity: 0;
   animation: fadeInSlideEmail 1s ease-out forwards;
 }
