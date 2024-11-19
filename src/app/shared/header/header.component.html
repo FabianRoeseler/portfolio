@@ -4,6 +4,7 @@
   </a>
   <div id="ham-menu">
     <svg
+      #hamMenu
       class="ham hamRotate ham8"
       viewBox="0 0 100 100"
       width="80"
@@ -27,24 +28,30 @@
     <div class="overlay" (click)="closeModal()"></div>
     <div class="modal">
       <div class="modal-content">
-        <h2>Impressum<br /><br /></h2>
-        <p>
-          Diensteanbieter <br /><br />
-          Fabian Roeseler<br />
-          Magdalenenstraße 7<br />
-          42111 Wuppertal<br />
-          Deutschland<br />
-          <br /><br /><br />
-          Kontaktmöglichkeiten <br /><br />
-          E-Mail-Adresse: info&#64;fabian-roeseler.com <br /><br />
-          <br />Design<br /><br />
-          Diese Webseite wurde erstellt nach einem Design der
-          www.developer-akademie.de <br /><br /><br />
-          Bildnachweise<br /><br />
-          Bildquellen und Urheberrechtshinweise: www.developer-akademie.de<br /><br /><br /><br /><br />
-          Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
-          Schwenke<br /><br />
-        </p>
+        <div class="nav">
+          <div id="nav-menu">
+            <div class="up">
+              <a href="#aboutme" class="link" (click)="closeModal()"
+                >ABOUT ME</a
+              >
+            </div>
+            <div class="up">
+              <a href="#myskills" class="link" (click)="closeModal()"
+                >MY SKILLS</a
+              >
+            </div>
+            <div class="up">
+              <a href="#projects" class="link" (click)="closeModal()"
+                >PORTFOLIO</a
+              >
+            </div>
+            <div class="up">
+              <a href="#content" class="link" (click)="closeModal()"
+                >CONTACT ME</a
+              >
+            </div>
+          </div>
+        </div>
         <button id="closebutton" (click)="closeModal()">Close</button>
       </div>
     </div>
@@ -54,3 +61,5 @@
 <!--
       [routerLink]="isNavigationOpen ? '' : '/navigation'"
 -->
+
+<!-- onclick="this.classList.toggle('active')" -->

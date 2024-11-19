@@ -151,6 +151,76 @@ header {
   }
 }
 
+ng-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease forwards;
+  display: flex;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+#nav-menu {
+  padding-top: 110px;
+  padding-bottom: 40px;
+  font-size: 66px;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "overpass";
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.up {
+  --b: 2px;   /* thickness of the border */
+  --c: black;   /* color of the border */
+  --w: 20px;  /* width of border */
+  margin-bottom: 25px;
+  transition: all 0.15s ease-in-out;
+  
+
+  border: var(--b) solid #0000; /* space for the border */
+  --_g: #0000 90deg,var(--c) 0;
+  --_p: var(--w) var(--w) border-box no-repeat;
+  background:
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+}
+
+.up:hover {
+  border-bottom: var(--b) solid var(--c);
+  transition: all 0.15s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  #nav-menu {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  #nav-menu {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 550px) {
 
   #logo {

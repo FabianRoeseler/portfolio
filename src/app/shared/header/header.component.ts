@@ -1,5 +1,5 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 
 @Component({
@@ -9,13 +9,20 @@ import { Component, Inject } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
 
-  isNavigationOpen = false;
+  @ViewChild('hamMenu') hamMenu?: ElementRef;
 
   isModalOpen = false;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
+
+    ngAfterViewInit() {
+      // Ensure the SVG element is loaded before trying to toggle the class
+      this.hamMenu?.nativeElement.addEventListener('load', () => {
+        this.hamMenu?.nativeElement.classList.toggle('active');
+      });
+  }
 
   openModal() {
     this.isModalOpen = true;
@@ -25,6 +32,7 @@ export class HeaderComponent {
   closeModal() {
     this.isModalOpen = false;
     this.document.body.style.overflow = 'auto'; // Restore background scroll
+    this.hamMenu?.nativeElement.classList.toggle('active');
+  }
   }
 
-}
