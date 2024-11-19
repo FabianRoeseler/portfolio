@@ -91,6 +91,66 @@ header {
   stroke-dashoffset: -64px;
 }
 
+// Modal
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background: black;
+  z-index: 1001;
+  overflow-y: auto;
+  max-height: 80vh;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+}
+
+.modal-content {
+  background-color: black;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  h2, p {
+    background-color: black;
+    color: whitesmoke;
+    font-family: overpass;
+}}
+
+#closebutton {
+  margin-top: 50px;
+  background-color: black;
+  color:#00BC8F;
+  border: 2px solid #00BC8F;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  font-family: overpass;
+  transition: all 120ms ease-in-out;
+  cursor: pointer;
+  margin-bottom: 20px;
+  &:hover {
+    scale: 1.1;
+    transition: all 120ms ease-in-out;
+  }
+}
+
 @media only screen and (max-width: 550px) {
 
   #logo {

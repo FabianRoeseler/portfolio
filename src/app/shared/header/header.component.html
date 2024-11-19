@@ -7,8 +7,7 @@
       class="ham hamRotate ham8"
       viewBox="0 0 100 100"
       width="80"
-      [routerLink]="isNavigationOpen ? '' : '/navigation'"
-      (click)="isNavigationOpen = !isNavigationOpen"
+      (click)="openModal()"
       onclick="this.classList.toggle('active')"
     >
       <path
@@ -22,4 +21,36 @@
       />
     </svg>
   </div>
+
+  <!-- Modal Content -->
+  <ng-container *ngIf="isModalOpen">
+    <div class="overlay" (click)="closeModal()"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <h2>Impressum<br /><br /></h2>
+        <p>
+          Diensteanbieter <br /><br />
+          Fabian Roeseler<br />
+          Magdalenenstraße 7<br />
+          42111 Wuppertal<br />
+          Deutschland<br />
+          <br /><br /><br />
+          Kontaktmöglichkeiten <br /><br />
+          E-Mail-Adresse: info&#64;fabian-roeseler.com <br /><br />
+          <br />Design<br /><br />
+          Diese Webseite wurde erstellt nach einem Design der
+          www.developer-akademie.de <br /><br /><br />
+          Bildnachweise<br /><br />
+          Bildquellen und Urheberrechtshinweise: www.developer-akademie.de<br /><br /><br /><br /><br />
+          Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
+          Schwenke<br /><br />
+        </p>
+        <button id="closebutton" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </ng-container>
 </header>
+
+<!--
+      [routerLink]="isNavigationOpen ? '' : '/navigation'"
+-->
