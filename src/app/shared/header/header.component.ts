@@ -18,7 +18,6 @@ export class HeaderComponent implements AfterViewInit {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
     ngAfterViewInit() {
-      // Ensure the SVG element is loaded before trying to toggle the class
       this.hamMenu?.nativeElement.addEventListener('load', () => {
         this.hamMenu?.nativeElement.classList.toggle('active');
       });
