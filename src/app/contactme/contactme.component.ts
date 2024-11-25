@@ -1,6 +1,6 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -12,7 +12,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactmeComponent {
 
-  http = Inject(HttpClient);
+  http = inject(HttpClient);
 
   contactData = {
     name: "",
@@ -68,7 +68,6 @@ export class ContactmeComponent {
     ngForm.reset();
     }
     else if (!ngForm.valid && ngForm.submitted) {
-      console.log("invalid form"); 
       this.displaySubmiterror();
       }
   }
