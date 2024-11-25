@@ -1,7 +1,7 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, Inject, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormBuilder, FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactme',
@@ -28,53 +28,18 @@ export class ContactmeComponent {
     }, 4000);
   }
 
-/*   onSubmit(ngForm: NgForm) {
+  onSubmit(ngForm: NgForm) {
     if(ngForm.valid && ngForm.submitted) {
-    console.log(this.contactData);
+    this.sendEmail(this.contactData.name, this.contactData.email, this.contactData.message, this.contactData.checkbox);
     ngForm.reset();
     } else if (!ngForm.valid && ngForm.submitted) {
-      console.log("invalid form"); 
       this.displaySubmiterror();
       }
-    } */
-
-  post = {
-    endPoint: 'https://www.fabian-roeseler.com/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) {
-
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response: any) => {
-
-            ngForm.reset();
-          },
-          /* error: (error: any) => {
-            console.error(error);
-            this.displaySubmiterror();
-          }, */
-          complete: () => console.info('send post complete'),
-        });
-        console.log(this.contactData);
-    ngForm.reset();
     }
-    else if (!ngForm.valid && ngForm.submitted) {
-      this.displaySubmiterror();
-      }
-  }
 
     isModalOpen = false;
 
-    constructor(@Inject(DOCUMENT) private document: Document) {}
+    constructor(@Inject(DOCUMENT) private document: Document, private fb: FormBuilder, private httpClient: HttpClient) {}
   
     openModal() {
       this.isModalOpen = true;
@@ -85,4 +50,36 @@ export class ContactmeComponent {
       this.isModalOpen = false;
       this.document.body.style.overflow = 'auto'; // Restore background scroll
     }
+
+    secretKey: string = "xovqvjvv";
+
+    emailForm = this.fb.group({
+      name: [""],
+      email: [""],
+      message: [""],
+      checkbox: [true]
+    });
+
+    sendEmail(name: String, email: String, message: String, checkbox: boolean) {
+      if (!this.emailForm.valid) {
+        return;
+      } else {
+          let url = "https://formspree.io/f/" + this.secretKey;
+          const httpOptions = {
+            headers: new HttpHeaders({
+              Accept: "application/json",
+              "Content-Type": "application/x-www-form-urlencoded"
+        })
+      };
+  
+      let data = `name=${name}&email=${email}&message=${message}`;
+      let errorMessage: string = "";
+      this.httpClient.post<any>(url, data, httpOptions).subscribe({
+          next: data => {
+          },
+          error: error => {
+              errorMessage = error.message;
+          }
+      })
+    }}
   }

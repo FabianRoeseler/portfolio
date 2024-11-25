@@ -79,7 +79,9 @@
           }
         </label>
       </div>
-      <button id="submitbutton" type="submit">Send Message</button>
+      <button id="submitbutton" type="submit" (click)="onSubmit(contactForm)">
+        Send Message
+      </button>
     </form>
     <div id="submiterrorcontainer">
       <span id="submiterror"
