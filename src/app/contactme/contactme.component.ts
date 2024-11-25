@@ -39,7 +39,7 @@ export class ContactmeComponent {
     } */
 
   post = {
-    endPoint: 'https://fabian-roeseler.com/sendMail.php',
+    endPoint: 'https://www.fabian-roeseler.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -50,19 +50,27 @@ export class ContactmeComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.valid && ngForm.submitted) {
+
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response: any) => {
 
-            ngForm.resetForm();
+            ngForm.reset();
           },
-          error: (error: any) => {
+          /* error: (error: any) => {
             console.error(error);
-          },
+            this.displaySubmiterror();
+          }, */
           complete: () => console.info('send post complete'),
         });
+        console.log(this.contactData);
+    ngForm.reset();
     }
+    else if (!ngForm.valid && ngForm.submitted) {
+      console.log("invalid form"); 
+      this.displaySubmiterror();
+      }
   }
 
     isModalOpen = false;
