@@ -101,6 +101,7 @@ header {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   z-index: 1000;
+
 }
 
 @keyframes slideInFromRight {
@@ -188,6 +189,16 @@ ng-content {
   max-width: 1440px;
 }
 
+.closebox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.blackbox {
+  width: 100%;
+  height: 100px;
+}
+
 @keyframes fadeInUp {
   0% {
     transform: translateY(20px);
@@ -224,6 +235,9 @@ ng-content {
 }
 
 .up {
+
+  display: flex;
+  justify-content: center;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease-out forwards;
@@ -239,7 +253,7 @@ ng-content {
   --_p: var(--w) var(--w) border-box no-repeat;
   background:
     conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-}
+  }
 
 .up:hover {
   border-bottom: var(--b) solid var(--c);
@@ -260,6 +274,10 @@ ng-content {
   #nav-menu {
     font-size: 40px;
   }
+
+  .up {
+    --b: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -279,6 +297,10 @@ ng-content {
   #ham-menu {
     padding-right: 10px;
     margin-right: 10px;
+  }
+
+  #nav-menu {
+    font-size: 20px;
   }
 
 }

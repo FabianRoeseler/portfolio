@@ -26,6 +26,9 @@
   <ng-container *ngIf="isModalOpen">
     <div class="overlay" (click)="closeModal()"></div>
     <div class="modal">
+      <div class="closebox">
+        <button id="closebutton" (click)="closeModal()">X</button>
+      </div>
       <div class="modal-content">
         <div class="nav">
           <div id="nav-menu">
@@ -51,14 +54,8 @@
             </div>
           </div>
         </div>
-        <button id="closebutton" (click)="closeModal()">Close</button>
       </div>
+      <div class="overlaybox"></div>
     </div>
   </ng-container>
 </header>
-
-<!--
-      [routerLink]="isNavigationOpen ? '' : '/navigation'"
--->
-
-<!-- onclick="this.classList.toggle('active')" -->
