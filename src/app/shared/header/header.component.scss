@@ -277,6 +277,11 @@ ng-content {
 
   .up {
     --b: 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  .up:hover {
+    border-bottom: 1px solid black;
   }
 }
 
@@ -301,6 +306,10 @@ ng-content {
 
   #nav-menu {
     font-size: 20px;
+  }
+
+  .modal {
+    max-height: 60%;
   }
 
 }
