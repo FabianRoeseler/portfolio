@@ -1,4 +1,5 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -10,6 +11,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contactme.component.scss'
 })
 export class ContactmeComponent {
+
+  http = Inject(HttpClient);
 
   contactData = {
     name: "",
@@ -25,7 +28,7 @@ export class ContactmeComponent {
     }, 4000);
   }
 
-  onSubmit(ngForm: NgForm) {
+/*   onSubmit(ngForm: NgForm) {
     if(ngForm.valid && ngForm.submitted) {
     console.log(this.contactData);
     ngForm.reset();
@@ -33,7 +36,34 @@ export class ContactmeComponent {
       console.log("invalid form"); 
       this.displaySubmiterror();
       }
+    } */
+
+  post = {
+    endPoint: 'https://fabian-roeseler.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response: any) => {
+
+            ngForm.resetForm();
+          },
+          error: (error: any) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
     }
+  }
 
     isModalOpen = false;
 
