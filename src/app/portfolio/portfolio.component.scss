@@ -121,7 +121,6 @@ button {
   }
 }
 
-
 @media (min-width: 800px) {
 .picture-one  {
   filter: grayscale(.4);
@@ -155,21 +154,19 @@ button {
 
 .picture-one {
   margin-bottom: 10px;
-}
   }
+}
 
-  @media only screen and (max-width: 700px) {
-
-    .black-white {
-      width: 80%;
+@media only screen and (max-width: 700px) {
+  .black-white {
+    width: 80%;
+  }
+  h1 {
+    font-family: 'Syne';
+    font-size: 60px;
+    font-weight: 800;
+  }
     }
-
-    h1 {
-      font-family: 'Syne';
-      font-size: 60px;
-      font-weight: 800;
-    }
-      }
 
 @media only screen and (max-width: 700px) {
   h1 {
@@ -190,8 +187,7 @@ button {
 }
 
 @media only screen and (max-width: 500px) {
-
 .textcontainer {
 margin-bottom: 40px;
-}
+  }
 }
