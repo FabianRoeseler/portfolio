@@ -279,6 +279,20 @@ form {
   cursor: pointer;
 }
 
+.submitFeedback {
+  color: #00BC8F;
+  background-color: black;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 220px;
+  border: 1px solid #00BC8F;
+  font-size: 12px;
+  opacity: 0;
+}
+
 @media only screen and (max-width: 850px) {
 
   h1 {

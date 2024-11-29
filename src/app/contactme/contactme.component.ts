@@ -28,6 +28,13 @@ export class ContactmeComponent {
     }, 4000);
   }
 
+  submitFeedback (){
+    document.getElementById("submitFeedback")!.classList.add("fade-in-error");
+  setTimeout(() => {
+    document.getElementById("submitFeedback")!.classList.remove("fade-in-error");
+    }, 4000);
+  }
+
   onSubmit(ngForm: NgForm) {
     if(ngForm.valid && ngForm.submitted) {
     this.sendEmail(this.contactData.name, this.contactData.email, this.contactData.message, this.contactData.checkbox);
@@ -76,6 +83,7 @@ export class ContactmeComponent {
       let errorMessage: string = "";
       this.httpClient.post<any>(url, data, httpOptions).subscribe({
           next: data => {
+            this.submitFeedback();
           },
           error: error => {
               errorMessage = error.message;
