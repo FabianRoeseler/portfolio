@@ -26,9 +26,15 @@
   <ng-container *ngIf="isModalOpen">
     <div class="overlay" (click)="closeModal()"></div>
     <div class="modal">
-      <div><span class="de-en">DE</span><span class="de-en">EN</span></div>
-      <div class="closebox">
-        <button id="closebutton" (click)="closeModal()">X</button>
+      <div class="headerBar">
+        <div>
+          <span class="en-de" (click)="useLanguage('en')">EN</span>
+          <span class="en-de" (click)="useLanguage('de')">DE</span>
+        </div>
+
+        <div class="closebox">
+          <button id="closebutton" (click)="closeModal()">X</button>
+        </div>
       </div>
       <div class="modal-content">
         <div class="nav">
