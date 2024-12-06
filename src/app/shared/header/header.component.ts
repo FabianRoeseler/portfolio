@@ -10,11 +10,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent /* implements AfterViewInit */ {
 
-  @ViewChild('hamMenu') hamMenu?: ElementRef;
+/*   @ViewChild('hamMenu') hamMenu?: ElementRef;
+
+  isModalOpen = false; */
 
   isModalOpen = false;
+
+  toggleMenu(): void {
+    this.isModalOpen = !this.isModalOpen;
+  }
 
   constructor(@Inject(DOCUMENT) private document: Document, private translate: TranslateService) {
 
@@ -22,18 +28,15 @@ export class HeaderComponent implements AfterViewInit {
     this.translate.setDefaultLang('en');
     this.translate.use(this.translate.getBrowserLang() || "en");
 
-    setTimeout(() => {
-      this.closeModal();
-    }, 100);
   }
 
-    ngAfterViewInit() {
+/* ngAfterViewInit() {
       this.hamMenu?.nativeElement.addEventListener('load', () => {
         this.hamMenu?.nativeElement.classList.toggle('active');
       });
-  }
+  } */
 
-  openModal() {
+/*   openModal() {
     this.isModalOpen = true;
     this.document.body.style.overflow = 'hidden'; // Prevent background scroll
   }
@@ -42,7 +45,7 @@ export class HeaderComponent implements AfterViewInit {
     this.isModalOpen = false;
     this.document.body.style.overflow = 'auto'; // Restore background scroll
     this.hamMenu?.nativeElement.classList.toggle('active');
-  }
+  } */
 
   useLanguage(language: string): void {
     this.translate.use(language);

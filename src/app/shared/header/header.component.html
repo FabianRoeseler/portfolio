@@ -2,7 +2,7 @@
   <a href="#">
     <img id="logo" src="assets/img/frlogo.png" alt="FR Logo" />
   </a>
-  <div id="ham-menu">
+  <!--   <div id="ham-menu">
     <svg
       #hamMenu
       class="ham hamRotate ham8"
@@ -21,10 +21,32 @@
         d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
       />
     </svg>
+  </div> -->
+
+  <div id="ham-menu">
+    <svg
+      #hamMenu
+      id="hamMenu"
+      class="ham hamRotate ham8"
+      viewBox="0 0 100 100"
+      width="80"
+      (click)="toggleMenu()"
+      [class.active]="isModalOpen"
+    >
+      <path
+        class="line top"
+        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+      />
+      <path class="line middle" d="m 30,50 h 40" />
+      <path
+        class="line bottom"
+        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+      />
+    </svg>
   </div>
 
   <ng-container *ngIf="isModalOpen">
-    <div class="overlay" (click)="closeModal()"></div>
+    <div class="overlay" (click)="toggleMenu()"></div>
     <div class="modal">
       <div class="headerBar">
         <div>
@@ -33,29 +55,29 @@
         </div>
 
         <div class="closebox">
-          <button id="closebutton" (click)="closeModal()">X</button>
+          <button id="closebutton" (click)="toggleMenu()">X</button>
         </div>
       </div>
       <div class="modal-content">
         <div class="nav">
           <div id="nav-menu">
             <div class="up">
-              <a href="#aboutme" class="link link1" (click)="closeModal()"
+              <a href="#aboutme" class="link link1" (click)="toggleMenu()"
                 >ABOUT ME</a
               >
             </div>
             <div class="up">
-              <a href="#myskills" class="link link2" (click)="closeModal()"
+              <a href="#myskills" class="link link2" (click)="toggleMenu()"
                 >MY SKILLS</a
               >
             </div>
             <div class="up">
-              <a href="#projects" class="link link3" (click)="closeModal()"
+              <a href="#projects" class="link link3" (click)="toggleMenu()"
                 >PORTFOLIO</a
               >
             </div>
             <div class="up">
-              <a href="#content" class="link link4" (click)="closeModal()"
+              <a href="#content" class="link link4" (click)="toggleMenu()"
                 >CONTACT ME</a
               >
             </div>
