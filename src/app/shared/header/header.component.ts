@@ -21,6 +21,10 @@ export class HeaderComponent implements AfterViewInit {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use(this.translate.getBrowserLang() || "en");
+
+    setTimeout(() => {
+      this.closeModal();
+    }, 100);
   }
 
     ngAfterViewInit() {
