@@ -1,20 +1,17 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { Component, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Component, Inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,TranslateModule],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent /* implements AfterViewInit */ {
+export class HeaderComponent {
 
-/*   @ViewChild('hamMenu') hamMenu?: ElementRef;
-
-  isModalOpen = false; */
 
   isModalOpen = false;
 
@@ -29,23 +26,6 @@ export class HeaderComponent /* implements AfterViewInit */ {
     this.translate.use(this.translate.getBrowserLang() || "en");
 
   }
-
-/* ngAfterViewInit() {
-      this.hamMenu?.nativeElement.addEventListener('load', () => {
-        this.hamMenu?.nativeElement.classList.toggle('active');
-      });
-  } */
-
-/*   openModal() {
-    this.isModalOpen = true;
-    this.document.body.style.overflow = 'hidden'; // Prevent background scroll
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-    this.document.body.style.overflow = 'auto'; // Restore background scroll
-    this.hamMenu?.nativeElement.classList.toggle('active');
-  } */
 
   useLanguage(language: string): void {
     this.translate.use(language);
